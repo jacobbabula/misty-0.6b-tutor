@@ -1,4 +1,4 @@
-# Misty: browser-local Qwen3-0.6B
+# Misty: browser-local 0.6b
 
 [![Status: experimental](https://img.shields.io/badge/status-experimental-f59e0b)](#limitations)
 [![Tests](https://github.com/jacobbabula/bailiwick-misty-qwen3-0.6b/actions/workflows/verify.yml/badge.svg)](https://github.com/jacobbabula/bailiwick-misty-qwen3-0.6b/actions/workflows/verify.yml)
