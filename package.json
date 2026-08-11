@@ -1,0 +1,14 @@
+{
+  "name": "bailiwick-misty-qwen3-0.6b",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public model card and evidence boundary for Bailiwick's browser-local Qwen3-0.6B tutor",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
+
