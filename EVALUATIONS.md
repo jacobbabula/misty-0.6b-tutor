@@ -5,7 +5,7 @@
 Release commit: `b2a1cad257d3310775f0584edd2b0722771ac73e`
 
 - AI contract suite: 137/137 passing
-- Live authenticated family-browser acceptance: cached Qwen model exercised
+- Live authenticated family-browser acceptance: cached local model exercised
 - Follow-up behavior: materially non-repetitive under the release repetition policy
 - Browser console: no errors observed during the recorded acceptance
 

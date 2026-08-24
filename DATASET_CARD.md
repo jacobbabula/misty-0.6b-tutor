@@ -1,8 +1,8 @@
 # Dataset card
 
-## Generative 0.6B model
+## Browser tutor
 
-Bailiwick did not create a fine-tuning dataset for Qwen3-0.6B and did not train the base model. No learner conversation dataset is published or claimed.
+No learner conversation dataset is published or claimed. This showcase contains no model files, private prompts, or training data.
 
 ## Public-safe evaluation domains
 

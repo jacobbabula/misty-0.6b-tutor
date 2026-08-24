@@ -1,85 +1,48 @@
-# Misty: browser-local 0.6b
+# Misty
 
-[![Status: experimental](https://img.shields.io/badge/status-experimental-f59e0b)](#limitations)
-[![Tests](https://github.com/jacobbabula/bailiwick-misty-qwen3-0.6b/actions/workflows/verify.yml/badge.svg)](https://github.com/jacobbabula/bailiwick-misty-qwen3-0.6b/actions/workflows/verify.yml)
-[![Base model](https://img.shields.io/badge/base-Qwen3--0.6B-7c3aed)](https://huggingface.co/onnx-community/Qwen3-0.6B-ONNX)
+[![Status: experimental](https://img.shields.io/badge/status-experimental-f59e0b)](#status)
+[![Checks](https://github.com/jacobbabula/misty-0.6b-tutor/actions/workflows/verify.yml/badge.svg)](https://github.com/jacobbabula/misty-0.6b-tutor/actions/workflows/verify.yml)
 
-This repository documents the small browser-local language model used by Bailiwick's experimental Misty tutor. It is a model card, integration record, and public evidence boundary—not a release of proprietary application code, prompts, learner data, or model weights.
+Misty is the browser-local tutor I built for Bailiwick Languages. It can give a hint or explain a language pattern, but it cannot grade work, unlock content, or change learner progress.
 
-## At a glance
+This repository is a public record of that integration. It does not include the private application, learner data, production prompts, model files, or a runnable tutor demo.
 
-| Item | Public record |
-| --- | --- |
-| Base model | `X` |
-| Parameter class | 0.6B |
-| Execution | Browser Web Worker via Transformers.js + ONNX Runtime Web |
-| Acceleration | WebGPU on supported devices |
-| Fine-tuning | **None for the generative 0.6B model** |
-| Learner data training | None |
-| Authority | Advisory text only; deterministic application logic remains authoritative |
-| Product status | Experimental / in development |
+## What I built
 
-## What was built
-
-The engineering contribution is the safe product integration around the base model:
-
-- explicit adult-approved model installation;
-- browser-local inference with no scripted tutor fallback;
-- bounded, answer-free learning context;
-- bilingual privacy, crisis, answer-leak, audience, and state-authority preflight;
-- deterministic output filtering;
-- bounded genuine-model revision for rejected repetitive replies;
-- no model access to grading, mastery, publication, or authorization functions.
+- local inference in a browser worker, with hardware acceleration when available;
+- bounded, answer-free lesson context;
+- privacy, safety, answer-leak, and audience checks around every reply;
+- fail-closed behavior when a response is rejected or the model is unavailable;
+- a hard boundary between tutor text and deterministic learning state.
 
 ```mermaid
 flowchart LR
-  R[Learner request] --> P[Privacy and safety preflight]
-  P -->|allowed| C[Bounded answer-free context]
-  C --> W[Browser Web Worker]
-  W --> Q[Qwen3-0.6B ONNX]
-  Q --> O[Output policy checks]
-  O -->|accepted| U[Advisory tutor message]
-  O -->|rejected| X[Safe omission or bounded revision]
-  U -. no state authority .-> D[Deterministic learning engine]
+  R[Learner request] --> P[Safety checks]
+  P --> C[Bounded lesson context]
+  C --> M[Browser-local model]
+  M --> O[Output checks]
+  O --> U[Optional tutor reply]
+  U -. no grading authority .-> D[Learning engine]
 ```
 
-## Dataset
+## Evidence
 
-No learner conversations are used to train the 0.6B model. Public evaluation documentation uses synthetic, non-personal prompts designed around language-learning support, privacy, crisis handling, answer leakage, audience boundaries, context grounding, and repetition.
+The tested private release recorded 137/137 AI contract checks and one authenticated browser acceptance using the cached local model. That proves the tested integration path, not general teaching quality or readiness for unrestricted child use.
 
-See [DATASET_CARD.md](DATASET_CARD.md).
-
-## Evaluations
-
-The private release suite passed 137/137 AI contract tests at release commit `b2a1cad257d3310775f0584edd2b0722771ac73e`. A live authenticated family-browser acceptance also exercised the cached Qwen model and observed a materially non-repetitive follow-up with no console errors.
-
-Those results demonstrate the tested integration path. They are not evidence of general pedagogical quality, fairness across learners, or readiness for unrestricted child use. See [EVALUATIONS.md](EVALUATIONS.md).
-
-## Sample outputs
-
-[samples/contract-examples.md](samples/contract-examples.md) contains sanitized public examples of the intended output boundary. They are labeled as contract examples, not verbatim transcripts of a private family session.
+Public documentation: [model card](MODEL_CARD.md) · [evaluation record](EVALUATIONS.md) · [limitations](LIMITATIONS.md) · [dataset boundary](DATASET_CARD.md)
 
 ## Run the public checks
 
 ```bash
-git clone https://github.com/jacobbabula/bailiwick-misty-qwen3-0.6b.git
-cd bailiwick-misty-qwen3-0.6b
+git clone https://github.com/jacobbabula/misty-0.6b-tutor.git
+cd misty-0.6b-tutor
 npm test
 ```
 
-This repository does not download or execute model weights. Reproducing the full private runtime requires the private Bailiwick application and is intentionally out of scope.
+These checks validate the public documentation. They do not run the private model integration.
 
-## Limitations
+## Status
 
-- Small and experimental; fluent output can still be wrong or pedagogically weak.
-- Browser support, available memory, WebGPU behavior, and generation latency vary by device.
-- Automated contract tests do not replace qualified child-safety, privacy, educational-quality, or accessibility review.
-- Public examples are sanitized and do not prove live model behavior.
-- The model cannot be trusted with grading, placement, mastery, authorization, or publishing.
+Experimental and in development. Device support, memory use, speed, and response quality vary. Misty is not trusted with grading, placement, authorization, or publishing.
 
-See [LIMITATIONS.md](LIMITATIONS.md) for the complete boundary.
-
-## Related project
-
-Explore the public product showcase at [Bailiwick Languages](https://jacobbabula.github.io/bailiwick-languages-demo/).
-
+See Misty in context in the [Bailiwick Languages showcase](https://jacobbabula.github.io/bailiwick-languages-demo/).

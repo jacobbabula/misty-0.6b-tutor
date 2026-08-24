@@ -1,8 +1,8 @@
 {
-  "name": "bailiwick-misty-qwen3-0.6b",
+  "name": "misty-browser-tutor-showcase",
   "version": "0.1.0",
   "private": true,
-  "description": "Public model card and evidence boundary for Bailiwick's browser-local Qwen3-0.6B tutor",
+  "description": "Public integration and evidence record for Bailiwick's browser-local tutor",
   "scripts": {
     "test": "node --test"
   },

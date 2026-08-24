@@ -1,6 +1,6 @@
 # Separate diagnostic specialist
 
-The diagnostic specialist is not Qwen3-0.6B. It is a compact deterministic text classifier built to identify six observable support categories from short synthetic learner statements.
+The diagnostic specialist is separate from Misty's language model. It is a compact deterministic text classifier built to identify six observable support categories from short synthetic learner statements.
 
 ## Method
 

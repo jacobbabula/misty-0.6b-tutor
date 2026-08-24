@@ -3,9 +3,7 @@
 ## Model details
 
 - Product name: Misty browser tutor
-- Base: `onnx-community/Qwen3-0.6B-ONNX`
-- Upstream family: Qwen3
-- Project fine-tuning: none
+- Model: small browser-compatible language model
 - Intended execution: supported desktop/Chromebook-class browsers
 - Product role: bounded language-learning guidance
 - Status: experimental
@@ -28,7 +26,7 @@
 
 ## Integration controls
 
-The model receives a bounded system instruction and answer-free activity context. Input and output policy layers enforce hard privacy, crisis, answer-leak, audience, context, and state-authority constraints. A reply that remains repetitive after bounded genuine-model revision is not rendered.
+The model receives a bounded system instruction and answer-free activity context. Input and output policy layers enforce privacy, crisis, answer-leak, audience, context, and state-authority constraints. A reply that remains repetitive after bounded revision is not rendered.
 
 The deterministic learning engine is the authority. Model unavailability or rejection does not change learner state.
 
