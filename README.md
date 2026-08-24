@@ -71,7 +71,7 @@ This repository does not download or execute model weights. Reproducing the full
 
 ## Limitations
 
-- Qwen3-0.6B is small and experimental; fluent output can still be wrong or pedagogically weak.
+- Small and experimental; fluent output can still be wrong or pedagogically weak.
 - Browser support, available memory, WebGPU behavior, and generation latency vary by device.
 - Automated contract tests do not replace qualified child-safety, privacy, educational-quality, or accessibility review.
 - Public examples are sanitized and do not prove live model behavior.
