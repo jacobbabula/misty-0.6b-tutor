@@ -3,9 +3,9 @@
 [![Status: experimental](https://img.shields.io/badge/status-experimental-f59e0b)](#status)
 [![Checks](https://github.com/jacobbabula/misty-0.6b-tutor/actions/workflows/verify.yml/badge.svg)](https://github.com/jacobbabula/misty-0.6b-tutor/actions/workflows/verify.yml)
 
-Misty is the browser-local tutor I built for Bailiwick Languages. It can give a hint or explain a language pattern, but it cannot grade work, unlock content, or change learner progress.
+Misty is the browser-local tutor I built for Bailiwick Languages.
 
-This repository is a public record of that integration. It does not include the private application, learner data, production prompts, model files, or a runnable tutor demo.
+This repository is a public record of that integration.
 
 ## What I built
 
@@ -44,5 +44,3 @@ These checks validate the public documentation. They do not run the private mode
 ## Status
 
 Experimental and in development. Device support, memory use, speed, and response quality vary. Misty is not trusted with grading, placement, authorization, or publishing.
-
-See Misty in context in the [Bailiwick Languages showcase](https://jacobbabula.github.io/bailiwick-languages-demo/).
