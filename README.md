@@ -10,7 +10,7 @@ This repository documents the small browser-local language model used by Bailiwi
 
 | Item | Public record |
 | --- | --- |
-| Base model | `onnx-community/Qwen3-0.6B-ONNX` |
+| Base model | `X` |
 | Parameter class | 0.6B |
 | Execution | Browser Web Worker via Transformers.js + ONNX Runtime Web |
 | Acceleration | WebGPU on supported devices |
