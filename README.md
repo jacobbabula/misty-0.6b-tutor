@@ -43,12 +43,6 @@ flowchart LR
   U -. no state authority .-> D[Deterministic learning engine]
 ```
 
-## Training and fine-tuning
-
-The generative Qwen3-0.6B model was **not trained or fine-tuned by this project**. Bailiwick uses the published ONNX base model with product-level prompt, context, runtime, and safety controls. This distinction matters: the repository does not claim ownership of the base model or a custom language-model training run.
-
-A separate compact diagnostic classifier was trained on 192 synthetic examples and evaluated on 72 held-out synthetic examples. It classifies six observable learning-support categories and is advisory only. It is documented separately in [docs/DIAGNOSTIC_SPECIALIST.md](docs/DIAGNOSTIC_SPECIALIST.md) so its evidence is not misattributed to Qwen3-0.6B.
-
 ## Dataset
 
 No learner conversations are used to train the 0.6B model. Public evaluation documentation uses synthetic, non-personal prompts designed around language-learning support, privacy, crisis handling, answer leakage, audience boundaries, context grounding, and repetition.
